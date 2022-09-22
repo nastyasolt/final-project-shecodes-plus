@@ -37,6 +37,7 @@ function displayTemperature(response) {
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 let apiKey = "597c40c39084687093b091cd48b366f8";
-let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=Lviv&appid=${apiKey}&units=metric`;
+let city = "Lviv";
+let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature);
