@@ -60,3 +60,10 @@ li:first-letter {
   font-size: 16px;
   top: -34px;
 }
+#minmax {
+  color: #878787;
+}
+#min,
+#max {
+  color: black;
+}
