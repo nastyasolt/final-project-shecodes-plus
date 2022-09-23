@@ -30,9 +30,19 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
-  let minElement = document.querySelector("#min");
-  let maxElement = document.querySelector("#max");
+  let minElement = document.querySelector("#minC");
+  let maxElement = document.querySelector("#maxC");
   celsiusTemperature = response.data.main.temp;
+
+  let fMin = document.querySelector("#minF");
+  fMin.innerHTML = `| ${Math.round(
+    (response.data.main.temp_min * 9) / 5 + 32
+  )} °F`;
+
+  let fMax = document.querySelector("#maxF");
+  fMax.innerHTML = `| ${Math.round(
+    (response.data.main.temp_max * 9) / 5 + 32
+  )} °F`;
 
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
@@ -45,8 +55,8 @@ function displayTemperature(response) {
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
-  minElement.innerHTML = Math.round(response.data.main.temp_min);
-  maxElement.innerHTML = Math.round(response.data.main.temp_max);
+  minElement.innerHTML = `${Math.round(response.data.main.temp_min)}°C`;
+  maxElement.innerHTML = `${Math.round(response.data.main.temp_max)}°C`;
 }
 
 function search(city) {

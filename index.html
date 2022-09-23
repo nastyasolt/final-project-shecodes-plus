@@ -34,6 +34,7 @@
 
               <div class="col-3">
                 <input
+                  id="button"
                   type="submit"
                   value="Search"
                   class="btn btn-primary w-100"
@@ -65,9 +66,14 @@
             <div class="col-6">
               <ul>
                 <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Wind : <span id="wind"></span>km/h</li>
+                <li>Wind : <span id="wind"></span> km/h</li>
                 <li id="minmax">
-                  min <span id="min"></span>°C/ max <span id="max"> </span>°C
+                  min <span id="minC"></span> <span id="minF"></span>
+                </li>
+                <li>
+                  max
+                  <span id="maxC"></span>
+                  <span id="maxF">°F</span>
                 </li>
               </ul>
             </div>
