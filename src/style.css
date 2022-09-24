@@ -46,8 +46,6 @@ a:hover {
 
 .weather-app-wrapper {
   max-width: 700px;
-  min-width: 660px;
-  margin: 40px auto;
 }
 
 .weather-app {
@@ -81,6 +79,22 @@ a:hover {
   margin-bottom: 100px;
 }
 
+#lastUptated {
+  font-size: 14px;
+}
+
+#description:first-letter {
+  text-transform: capitalize;
+}
+#description {
+  backdrop-filter: brightness(80%);
+  margin: 20px 450px 20px 0px;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid rgba(221, 221, 221, 0.322);
+  border-radius: 20px;
+}
+
 .weather-temperature img {
   margin-right: 5px;
   height: 64px;
@@ -106,22 +120,6 @@ a:hover {
   text-decoration: none;
 }
 
-#lastUptated {
-  font-size: 14px;
-}
-
-#description:first-letter {
-  text-transform: capitalize;
-}
-#description {
-  backdrop-filter: brightness(80%);
-  margin: 20px 450px 20px 0px;
-  padding: 10px;
-  text-align: center;
-  border: 1px solid rgba(221, 221, 221, 0.322);
-  border-radius: 20px;
-}
-
 #button {
   color: #182b26a2;
 }
@@ -131,4 +129,24 @@ a:hover {
 #minF,
 #maxF {
   color: rgb(255, 255, 255);
+}
+
+.weather-forcast {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+  color: #ffffff;
+  opacity: 0.6;
+}
+
+#weather-forecast-temperature-min {
+  opacity: 0.6;
+}
+
+.weather-forecast-temperature {
+  font-size: 13px;
+  color: #ffffff;
 }
