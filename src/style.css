@@ -59,7 +59,7 @@ a:hover {
   border-color: rgb(0 151 36 / 9%);
 }
 .second-colon {
-  backdrop-filter: url(filters.svg#filter) blur(1px) brightness(80%);
+  backdrop-filter: blur(1px) brightness(80%);
   border: 1px solid rgba(221, 221, 221, 0.322);
   text-align: center;
   padding: 20px;
@@ -92,7 +92,7 @@ a:hover {
   text-transform: capitalize;
 }
 #description {
-  backdrop-filter: brightness(80%);
+  backdrop-filter: blur(1px) brightness(80%);
   margin: 20px 450px 20px 0px;
   padding: 10px;
   text-align: center;
