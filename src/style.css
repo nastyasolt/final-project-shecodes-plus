@@ -2,7 +2,6 @@ body {
   background-image: url("../img15.jpg");
 
   background-repeat: no-repeat;
-
   background-size: cover;
   max-width: 100%;
   height: auto;
@@ -68,7 +67,7 @@ a:hover {
 }
 
 .overview {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .btn-primary {
@@ -95,7 +94,7 @@ a:hover {
   margin: 20px 450px 2px 20px;
   padding: 10px;
   text-align: center;
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 1000;
   color: #000000c5;
   opacity: 0.7;
@@ -122,7 +121,7 @@ a:hover {
 }
 
 .second-colon {
-  backdrop-filter: brightness(10%);
+  backdrop-filter: brightness(30%);
 
   text-align: center;
   padding: 20px;
