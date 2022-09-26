@@ -21,7 +21,8 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
-function displayForcast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
   let forecastHTML = `<div class="row">`;
@@ -45,6 +46,14 @@ function displayForcast() {
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "5aac6d0188c6f17d6d2bbe6591b6fef0";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function displayTemperature(response) {
@@ -83,10 +92,12 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
   minElement.innerHTML = `${Math.round(response.data.main.temp_min)}°C`;
   maxElement.innerHTML = `${Math.round(response.data.main.temp_max)}°C`;
+
+  getForecast(response.data.coord);
 }
 
 function search(city) {
-  let apiKey = "597c40c39084687093b091cd48b366f8";
+  let apiKey = "5aac6d0188c6f17d6d2bbe6591b6fef0";
 
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
@@ -128,5 +139,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Lviv");
-
-displayForcast();
