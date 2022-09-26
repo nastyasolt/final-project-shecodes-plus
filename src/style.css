@@ -60,6 +60,7 @@ a:hover {
 }
 
 .weather-app {
+  backdrop-filter: blur(1px);
   padding: 50px;
   border-radius: 20px;
 
@@ -73,14 +74,12 @@ a:hover {
 .btn-primary {
   font-size: 18px;
   font-weight: bold;
-  background-color: #ffffff33;
+  background-color: #ffffff21;
   border: none;
-  backdrop-filter: blur(1.5px);
 }
 .btn-primary:hover {
   background-color: #ffffff;
-  border-color: #ffffff6e;
-  filter: blur(0px);
+
   transition: all 500ms ease-in-out;
 }
 
@@ -123,8 +122,8 @@ a:hover {
 }
 
 .second-colon {
-  backdrop-filter: blur(1px) brightness(80%);
-  border: 1px solid rgba(196, 196, 196, 0.329);
+  backdrop-filter: brightness(10%);
+
   text-align: center;
   padding: 20px;
   border-radius: 20px;
@@ -139,7 +138,7 @@ a:hover {
 }
 
 .weather-forecast-temperature {
-  font-weight: 600;
+  font-weight: 700;
   color: #000000c7;
   font-size: 18px;
 }
