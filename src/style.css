@@ -58,11 +58,11 @@ a:hover {
 }
 
 .weather-app {
-  backdrop-filter: blur(1px);
+  backdrop-filter: blur(2px);
   padding: 50px;
-  border-radius: 20px;
+  border-radius: 30px;
 
-  background-color: rgba(185, 211, 183, 0.4);
+  background-image: linear-gradient(120deg, #668a6177 0%, #79834060 100%);
 }
 
 .overview {
@@ -77,8 +77,7 @@ a:hover {
 }
 .btn-primary:hover {
   background-color: #ffffff;
-
-  transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
 }
 
 #lastUptated {
