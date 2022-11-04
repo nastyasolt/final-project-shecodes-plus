@@ -148,6 +148,11 @@ a:hover {
   color: #182b26a2;
 }
 
+.col-2 {
+  padding: 0;
+
+}
+
 @media (max-width: 900px) {
 
   li {
@@ -182,11 +187,6 @@ a:hover {
 
   .weather-forecast-temperature {
     font-size: 15px;
-  }
-
-  .col-2 {
-    padding: 0;
-
   }
 
 }
